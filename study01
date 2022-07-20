@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("FUCK THE WORLD\n");
+	
+	return 0;
+}
