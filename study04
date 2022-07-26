@@ -5,7 +5,7 @@ int main()
 	int price = 0;
 
 	printf("请输入金额（元）");
-	scanf_s("%d", &price);
+	scanf_s("%d", &price);                //scanf显示不安全，替换为scanf_s
 
 	int change = 100 - price;
 
@@ -13,3 +13,24 @@ int main()
 
 	return 0;
 }
+
+
+
+
+
+                                              //另一解决办法，将#define _CRT_SECURE_NO_WARNINGS置于1行，无需替换scanf
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int sum = 0;
+	scanf("%d %d", &a, &b);
+	sum = a + b;
+	printf("sum = %d\n", sum);
+
+	return 0;
+}	
