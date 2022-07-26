@@ -6,7 +6,7 @@ int main()
 
 	printf("请输入金额（元）");
 	scanf_s("%d", &price);                //scanf显示不安全，替换为scanf_s
-
+                                                //不推荐，由VS编译器提供，不是C语言标准规定
 	int change = 100 - price;
 
 	printf("找您%d元\n", change);
@@ -18,9 +18,9 @@ int main()
 
 
 
-                                              //另一解决办法，将#define _CRT_SECURE_NO_WARNINGS置于1行，无需替换scanf
+                                              //另一解决办法，将#define _CRT_SECURE_NO_WARNINGS 1置于第一行，无需替换scanf
 
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 
 int main()
