@@ -2,5 +2,5 @@
 
 int main()
 {
-	printf("%zd\n", sizeof(double));
+	printf("%zd\n", sizeof(double));                //printf("%zd\n"  为标准语法，应改正
 }	
